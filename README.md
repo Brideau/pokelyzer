@@ -6,7 +6,7 @@ A data model for doing geospatial analysis and regular analytics on Pokemon Go d
 
 ## Patches
 
-**Jul 27, 2016 ~11PM EDT **
+### Jul 27, 2016 ~11PM EDT 
 
 If you loaded the database backup file before this time ([commit bd81308](https://github.com/Brideau/pokelyzer/commit/bd813085e0ce5518ae55e33dcc87241b710fb215)), run the following command to patch your existing database. It fixes an issue with joining tables in Tableau.
 
