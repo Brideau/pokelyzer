@@ -1,7 +1,7 @@
 ﻿-- Create the main tables
 
 CREATE TABLE public.spotted_pokemon(
-	id serial NOT NULL,
+	id bigserial NOT NULL,
 	name varchar(40) NOT NULL,
 	encounter_id varchar(40),
 	last_modified_time bigint,
