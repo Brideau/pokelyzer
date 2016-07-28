@@ -6,7 +6,17 @@ A data model for doing geospatial analysis and regular analytics on Pokemon Go d
 
 ## Patches
 
-### Jul 27, 2016 ~11PM EDT 
+### Jul 28, 2016 ~12PM EDT
+
+I've added a table for doing analysis using various Pokemon properties, such as type, classification, weight and height. To patch an existing database to support this, first drop the existing pokemon_info table from pgAdmin or using:
+
+```sql
+DROP TABLE public.pokemon_info;
+```
+
+And then use the same Restore feature you used to load the database initially to load the pokemon_into_table_patch.tar file available in the repo.
+
+### Jul 27, 2016 ~11PM EDT
 
 If you loaded the database backup file before this time ([commit bd81308](https://github.com/Brideau/pokelyzer/commit/bd813085e0ce5518ae55e33dcc87241b710fb215)), run the following command to patch your existing database. It fixes an issue with joining tables in Tableau.
 
