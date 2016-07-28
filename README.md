@@ -6,6 +6,20 @@ A data model for doing geospatial analysis and regular analytics on Pokemon Go d
 
 ## Patches
 
+### Jul 28, 2016 ~7:39PM EDT
+
+A big thanks to [@zenthere](https://twitter.com/zenthere) for fixing a bug in my jitter calculation, and for creating a beautiful solution to the fact that a lot of rows in the database were duplicates. To apply this patch, shut down your map server and execute the following SQL to remove all current duplicates and put a constraint on any new ones:
+
+```sql
+DELETE FROM spotted_pokemon USING spotted_pokemon sp2
+  WHERE spotted_pokemon.encounter_id = sp2.encounter_id AND spotted_pokemon.id > sp2.id;
+ALTER TABLE spotted_pokemon ADD CONSTRAINT encounter_id_unique UNIQUE (encounter_id);
+```
+
+Then update your customLog.py file with the one from the Pokelyzer v0.3-alpha release.
+
+Start your server back up!
+
 ### Jul 28, 2016 ~12PM EDT
 
 I've added a table for doing analysis using various Pokemon properties, such as type, classification, weight and height. To patch an existing database to support this, first drop the existing pokemon_info table from pgAdmin or using:
