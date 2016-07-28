@@ -48,8 +48,8 @@ def logPokemonDb(p):
 
     longitude = float(p['longitude'])
     latitude = float(p['latitude'])
-    longitude_jittered = longitude + (random.gauss(0, 0.3) - 0.5) * 0.0005
-    latitude_jittered = latitude + (random.gauss(0, 0.3) - 0.5) * 0.0005
+    longitude_jittered = longitude + (random.gauss(0, 0.15) - 0.5) * 0.0005
+    latitude_jittered = latitude + (random.gauss(0, 0.15) - 0.5) * 0.0005
 
     query =  "INSERT INTO spotted_pokemon (name, encounter_id, last_modified_time, time_until_hidden_ms, hidden_time_unix_s, hidden_time_utc, spawnpoint_id, longitude, latitude, pokemon_id, longitude_jittered, latitude_jittered) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
     data = (pokemon_name, encounter_id, last_modified_time, time_until_hidden_ms, hidden_time_unix_s, hidden_time_utc, spawnpoint_id, longitude, latitude, pokemon_id, longitude_jittered, latitude_jittered)
