@@ -13,7 +13,7 @@ args = get_args()
 #elif args.only:
 #    ONLY = [i.lower().strip() for i in args.only.split(',')]
 
-conn = psycopg2.connect(dbname="pokemon_go", user="postgres", password=args.pokel_pass, host="127.0.0.1")
+conn = psycopg2.connect(dbname="pokemon_go", user="pokemon_go_role", password=args.pokel_pass, host="127.0.0.1")
 conn.autocommit = True
 cursor = conn.cursor()
 
