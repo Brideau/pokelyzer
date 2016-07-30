@@ -24,7 +24,7 @@ SET pokemon_go_era = '2'
 WHERE hidden_time_utc >= '2016-07-29 15:00:00';
 ```
 
-Then update your `utils.py` and `customLog.py` files to match the sample ones above. When you start your server, just add an extra parameter, `--pokel-era 2`, which identifies the current "era" as 2.
+Do a `git pull` from your PokemonGo-Map directory, to make sure you have the newest version, and then update your `utils.py` and `customLog.py` files to match the sample ones above. When you start your server, just add an extra parameter, `--pokel-era 2`, which identifies the current "era" as 2.
 
 Thanks again to [@zenthere](https://twitter.com/zenthere) for supplying the SQL for this as well!
 
