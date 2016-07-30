@@ -6,6 +6,26 @@ A data model for doing geospatial analysis and regular analytics on Pokemon Go d
 
 ## Patches
 
+### Jul 30, 2016 ~10:30AM EDT
+
+This patch adds an extra column that gives us the ability to assign different Pokemon records to different "eras" - a very useful thing to have when doing historical analysis.
+
+Simply stop your server, and run this SQL:
+
+```sql
+ALTER TABLE public.spotted_pokemon ADD COLUMN pokemon_go_era integer;
+
+UPDATE public.spotted_pokemon
+SET pokemon_go_era = '1'
+WHERE hidden_time_utc < '2016-07-29 15:00:00';
+
+UPDATE public.spotted_pokemon
+SET pokemon_go_era = '2'
+WHERE hidden_time_utc >= '2016-07-29 15:00:00';
+```
+
+Then update your `utils.py` and `customLog.py` files to match the sample ones above, and start your server back up.
+
 ### Jul 28, 2016 ~7:39PM EDT
 
 A big thanks to [@zenthere](https://twitter.com/zenthere) for fixing a bug in my jitter calculation, and for creating a beautiful solution to the fact that a lot of rows in the database were duplicates. To apply this patch, shut down your map server and execute the following SQL to remove all current duplicates and put a constraint on any new ones:
