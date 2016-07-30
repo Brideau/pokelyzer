@@ -26,6 +26,8 @@ WHERE hidden_time_utc >= '2016-07-29 15:00:00';
 
 Then update your `utils.py` and `customLog.py` files to match the sample ones above, and start your server back up.
 
+Thanks again to [@zenthere](https://twitter.com/zenthere) for supplying the SQL for this as well!
+
 ### Jul 28, 2016 ~7:39PM EDT
 
 A big thanks to [@zenthere](https://twitter.com/zenthere) for fixing a bug in my jitter calculation, and for creating a beautiful solution to the fact that a lot of rows in the database were duplicates. To apply this patch, shut down your map server and execute the following SQL to remove all current duplicates and put a constraint on any new ones:
