@@ -6,6 +6,12 @@ A data model for doing geospatial analysis and regular analytics on Pokemon Go d
 
 ## Patches
 
+### Jul 30, 2016 ~4:45AM EDT
+
+This patch adds information that makes it easier to debug issues with the database. Specifically, I have added version tracking so that all records stored record the version of the schema they were stored with, along with a timestamp of when each record was stored.
+
+To apply this patch, get the SQL from [the 2016-07-30-metaPatch.sql file in the patches folder above]() and apply it to your database. There's no need to stop your web server to apply this.
+
 ### Jul 30, 2016 ~10:30AM EDT
 
 This patch adds an extra column that gives us the ability to assign different Pokemon records to different "eras" - a very useful thing to have when doing historical analysis, especially since the recent changes that switched around all the nests.
