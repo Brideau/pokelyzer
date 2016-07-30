@@ -16,7 +16,7 @@ Thanks again to [@zenthere](https://twitter.com/zenthere) for supplying the SQL 
 
 ### Jul 28, 2016 ~7:39PM EDT
 
-A big thanks to [@zenthere](https://twitter.com/zenthere) for fixing a bug in my jitter calculation, and for creating a beautiful solution to the fact that a lot of rows in the database were duplicates. To apply this patch, shut down your map server and execute the following SQL to remove all current duplicates and put a constraint on any new ones:
+A big thanks to [@zenthere](https://twitter.com/zenthere) for fixing a bug in my jitter calculation, and for creating a beautiful solution to the fact that a lot of rows in the database were duplicates. **(Also note, if you don't apply this patch you'll receive a "there is no unique or exclusion constraint" error.)** To apply this patch, shut down your map server and execute the following SQL to remove all current duplicates and put a constraint on any new ones:
 
 ```sql
 DELETE FROM spotted_pokemon USING spotted_pokemon sp2
