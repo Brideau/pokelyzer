@@ -10,7 +10,7 @@ A data model for doing geospatial analysis and regular analytics on Pokemon Go d
 
 This patch adds information that makes it easier to debug issues with the database. Specifically, I have added version tracking so that all records stored record the version of the schema they were stored with, along with a timestamp of when each record was stored.
 
-To apply this patch, get the SQL from [the 2016-07-30-metaPatch.sql file in the patches folder above]() and apply it to your database. There's no need to stop your web server to apply this.
+To apply this patch, get the SQL from [the 2016-07-30-metaPatch.sql file in the patches folder above](https://github.com/Brideau/pokelyzer/blob/master/patches/2016-07-30-metaPatch.sql) and apply it to your database. There's no need to stop your web server to apply this.
 
 ### Jul 30, 2016 ~10:30AM EDT
 
@@ -42,7 +42,7 @@ I've added a table for doing analysis using various Pokemon properties, such as 
 DROP TABLE public.pokemon_info;
 ```
 
-And then use the same Restore feature you used to load the database initially to load the pokemon_into_table_patch.tar file available in the repo.
+And then use the same Restore feature you used to load the database initially to load the [pokemon_into_table_patch.tar file](https://github.com/Brideau/pokelyzer/raw/master/patches/pokemon_info_table_patch.tar) available in patches folder above.
 
 ### Jul 27, 2016 ~11PM EDT
 
