@@ -8,7 +8,7 @@ A data model for doing geospatial analysis and regular analytics on Pokemon Go d
 
 ### Jul 30, 2016 ~10:30AM EDT
 
-This patch adds an extra column that gives us the ability to assign different Pokemon records to different "eras" - a very useful thing to have when doing historical analysis.
+This patch adds an extra column that gives us the ability to assign different Pokemon records to different "eras" - a very useful thing to have when doing historical analysis, especially since the recent changes that switched around all the nests.
 
 Simply stop your server, and run this SQL:
 
@@ -24,7 +24,7 @@ SET pokemon_go_era = '2'
 WHERE hidden_time_utc >= '2016-07-29 15:00:00';
 ```
 
-Then update your `utils.py` and `customLog.py` files to match the sample ones above, and start your server back up.
+Then update your `utils.py` and `customLog.py` files to match the sample ones above. When you start your server, just add an extra parameter, `--pokel-era 2`, which identifies the current "era" as 2.
 
 Thanks again to [@zenthere](https://twitter.com/zenthere) for supplying the SQL for this as well!
 
