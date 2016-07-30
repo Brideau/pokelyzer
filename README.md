@@ -10,21 +10,7 @@ A data model for doing geospatial analysis and regular analytics on Pokemon Go d
 
 This patch adds an extra column that gives us the ability to assign different Pokemon records to different "eras" - a very useful thing to have when doing historical analysis, especially since the recent changes that switched around all the nests.
 
-Simply stop your server, and run this SQL:
-
-```sql
-ALTER TABLE public.spotted_pokemon ADD COLUMN pokemon_go_era integer;
-
-UPDATE public.spotted_pokemon
-SET pokemon_go_era = '1'
-WHERE hidden_time_utc < '2016-07-29 15:00:00';
-
-UPDATE public.spotted_pokemon
-SET pokemon_go_era = '2'
-WHERE hidden_time_utc >= '2016-07-29 15:00:00';
-```
-
-Do a `git pull` from your PokemonGo-Map directory, to make sure you have the newest version, and then update your `utils.py` and `customLog.py` files to match the sample ones above. When you start your server, just add an extra parameter, `--pokel-era 2`, which identifies the current "era" as 2.
+It's a bit of a longer one, so see the guide here: <http://www.whackdata.com/2016/07/29/the-era-of-eras-pokemon-go-pokelyzer/>
 
 Thanks again to [@zenthere](https://twitter.com/zenthere) for supplying the SQL for this as well!
 
