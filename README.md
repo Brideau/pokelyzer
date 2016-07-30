@@ -36,7 +36,7 @@ DELETE FROM spotted_pokemon USING spotted_pokemon sp2
 ALTER TABLE spotted_pokemon ADD CONSTRAINT encounter_id_unique UNIQUE (encounter_id);
 ```
 
-Then update your customLog.py file with the one from the Pokelyzer v0.3-alpha release.
+Then update your [customLog.py file with the one from the Pokelyzer v0.3-alpha release](https://github.com/Brideau/pokelyzer/blob/v0.3-alpha/sample_customLog.py).
 
 Start your server back up!
 
