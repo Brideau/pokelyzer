@@ -41,7 +41,7 @@ AS $BODY$
 DECLARE
   payload text;
 BEGIN
-    NEW.meta_row_insertion_time = CURRENT_TIMESTAMP;
+    NEW.meta_row_insertion_time = timezone('UTC', CURRENT_TIMESTAMP);
     RETURN NEW;
 END
 $BODY$;
