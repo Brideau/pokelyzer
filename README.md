@@ -28,7 +28,9 @@ sudo npm install -g bunyan
  ```
 - Open another terminal window, and clone the develop branch of PokemonGo-Map using the command:
 
-`git clone -b develop https://github.com/AHAAAAAAA/PokemonGo-Map.git`
+```bash
+git clone -b develop https://github.com/AHAAAAAAA/PokemonGo-Map.git
+```
 
  - Follow the instructions available in [their wiki](https://github.com/AHAAAAAAA/PokemonGo-Map/wiki) to complete the install, making sure it is in a separate directory from Pokelyzer
  - When you start the server, ensure that the `-wh` parameter is included, as this tells PokemonGo-Map where to send the data as it comes in. In our case, it's the Pokelyzer Webhook App:
