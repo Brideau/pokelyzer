@@ -6,7 +6,7 @@ A data model for doing geospatial analysis and regular analytics on Pokemon Go d
 
 ## Installation Instructions
 
- - [Install Node.js v4.X](https://nodejs.org/en/)
+ - [Install Node.js v4.X](https://nodejs.org/en/) using the installer on the home page or through [the command line](https://nodejs.org/en/download/package-manager/)
  - Make sure npm is up-to-date by running `sudo npm install npm -g`
  - Pull the repo and install the dependencies
 ```bash
@@ -19,6 +19,8 @@ npm install
  ```sql
  DB_NAME='pokemon_go_node' DB_USER='pokemon_go_role' DB_PASS='[YOUR PASS]' DB_PORT=5432 WS_PORT=9876 ERA=2  node app.js | bunyan -l info
  ```
+
+
 
 ## Patches
 

@@ -10,7 +10,7 @@ var dist = gaussian(0, 0.3);
 var pg = require('pg');
 var config = {
   user: process.env.DB_USER || 'pokemon_go_role',
-  database: process.env.DB_NAME || 'pokemon_go_node',
+  database: process.env.DB_NAME || 'pokemon_go',
   password: process.env.DB_PASS,
   port: process.env.DB_PORT || DB_PORT,
   max: 20,
