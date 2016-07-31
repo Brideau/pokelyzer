@@ -14,7 +14,7 @@ Once that's complete, return here to complete the remaining instructions.
 
  - [Install Node.js v4.X](https://nodejs.org/en/) using the installer on the home page or through [the command line](https://nodejs.org/en/download/package-manager/)
  - Make sure npm is up-to-date by running `sudo npm install npm -g`
- - Pull the repo and install the dependencies
+ - Pull the repo and install the dependencies:
 ```bash
 git clone https://github.com/Brideau/pokelyzer
 cd ./pokelyzer
