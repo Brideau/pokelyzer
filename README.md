@@ -20,7 +20,7 @@ See the [wiki page](https://github.com/Brideau/pokelyzer/wiki) for installation 
 
 If you already have the database running, ensure all of the patches below since your installation date have been applied. I wish there were better version control for databases, but this is the best solution I have for now. If you know of a better one, let me know.
 
-To use the webhook listener, I recommend doing a fresh installation of PokemonGo-Map using the instructions prodvided in the wiki. Just rename your current directory to something else and do the install. No data will be lost since that's stored separately from the PokemonGo-Map database.
+To use the webhook listener, I recommend doing a fresh installation of PokemonGo-Map using the instructions prodvided in [the wiki ](https://github.com/Brideau/pokelyzer/wiki). Just rename your current directory to something else and do the install. No data will be lost from Pokelyzer since that's stored separately from the PokemonGo-Map database.
 
 ## Patches
 
