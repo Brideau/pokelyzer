@@ -61,39 +61,39 @@ app.post('/', function(req, res) {
           return log.error('Error fetching client from pool', err);
         }
 
-        query_string = `INSERT INTO spotted_pokemon (
-          encounter_id,
-          last_modified_time,
-          time_until_hidden_ms,
-          hidden_time_unix_s,
-          hidden_time_utc,
-          spawnpoint_id,
-          longitude,
-          latitude,
-          pokemon_id,
-          longitude_jittered,
-          latitude_jittered,
-          pokemon_go_era)
-        VALUES (
-          '` + m.encounter_id + `'::varchar,
-          ` + m.last_modified_time + `::bigint,
-          ` + m.time_until_hidden_ms + `::bigint,
-          ` + m.hidden_time_unix_s + `::bigint,
-          '` + m.hidden_time_utc + `'::timestamp,
-          '` + m.spawnpoint_id + `'::varchar,
-          ` + m.longitude + `::double precision,
-          ` + m.latitude + `::double precision,
-          ` + m.pokemon_id + `::smallint,
-          ` + m.longitude_jittered + `::double precision,
-          ` + m.latitude_jittered + `::double precision,
-          ` + m.pokemon_go_era + `::integer
-        )
-        ON CONFLICT (encounter_id)
-        DO UPDATE
-          SET last_modified_time = EXCLUDED.last_modified_time,
-          time_until_hidden_ms = EXCLUDED.time_until_hidden_ms,
-          hidden_time_unix_s = EXCLUDED.hidden_time_unix_s,
-          hidden_time_utc = EXCLUDED.hidden_time_utc;`;
+        query_string = "INSERT INTO spotted_pokemon ( \
+          encounter_id, \
+          last_modified_time, \
+          time_until_hidden_ms, \
+          hidden_time_unix_s, \
+          hidden_time_utc, \
+          spawnpoint_id, \
+          longitude, \
+          latitude, \
+          pokemon_id, \
+          longitude_jittered, \
+          latitude_jittered, \
+          pokemon_go_era) \
+        VALUES ( \
+          '" + m.encounter_id + "'::varchar, \
+          " + m.last_modified_time + "::bigint, \
+          " + m.time_until_hidden_ms + "::bigint, \
+          " + m.hidden_time_unix_s + "::bigint, \
+          '" + m.hidden_time_utc + "'::timestamp, \
+          '" + m.spawnpoint_id + "'::varchar, \
+          " + m.longitude + "::double precision, \
+          " + m.latitude + "::double precision, \
+          " + m.pokemon_id + "::smallint, \
+          " + m.longitude_jittered + "::double precision, \
+          " + m.latitude_jittered + "::double precision, \
+          " + m.pokemon_go_era + "::integer \
+        ) \
+        ON CONFLICT (encounter_id) \
+        DO UPDATE \
+          SET last_modified_time = EXCLUDED.last_modified_time, \
+          time_until_hidden_ms = EXCLUDED.time_until_hidden_ms, \
+          hidden_time_unix_s = EXCLUDED.hidden_time_unix_s, \
+          hidden_time_utc = EXCLUDED.hidden_time_utc;";
 
         log.info("Pokemon with ID " + m.pokemon_id + " found.")
         log.debug(query_string);
