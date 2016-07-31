@@ -16,7 +16,7 @@ Once that's complete, return here to complete the remaining instructions.
  - Make sure npm is up-to-date by running `sudo npm install npm -g`
  - Pull the repo and install the dependencies:
 ```bash
-git clone -b version1-branch https://github.com/Brideau/pokelyzer
+git clone https://github.com/Brideau/pokelyzer
 cd ./pokelyzer
 npm install
 sudo npm install -g bunyan
@@ -26,9 +26,9 @@ sudo npm install -g bunyan
  ```sql
  DB_NAME='pokemon_go' DB_USER='pokemon_go_role' DB_PASS='[YOUR PASS]' DB_PORT=5432 WS_PORT=9876 ERA=2  node app.js | bunyan -l info
  ```
-- Open another terminal window, and clone [this fork](https://github.com/Brideau/PokemonGo-Map/) of PokemonGo-Map using the command (I had to add some extra data to their webhook json and am waiting on a pull request to go through):
+- Open another terminal window, and clone the develop branch of PokemonGo-Map using the command:
 
-`git clone -b develop https://github.com/Brideau/PokemonGo-Map/`
+`git clone -b develop https://github.com/AHAAAAAAA/PokemonGo-Map.git`
 
  - Follow the instructions available in [their wiki](https://github.com/AHAAAAAAA/PokemonGo-Map/wiki) to complete the install, making sure it is in a separate directory from Pokelyzer
  - When you start the server, ensure that the `-wh` parameter is included, as this tells PokemonGo-Map where to send the data as it comes in. In our case, it's the Pokelyzer Webhook App:
