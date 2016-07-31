@@ -95,11 +95,12 @@ app.post('/', function(req, res) {
           hidden_time_unix_s = EXCLUDED.hidden_time_unix_s,
           hidden_time_utc = EXCLUDED.hidden_time_utc;`;
 
+        log.info()
         log.debug(query_string);
 
         client.query(query_string,
         function(err, result) {
-          done;
+          done();
 
           if(err) {
             return log.error("Error running query", err);
