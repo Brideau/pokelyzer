@@ -26,7 +26,7 @@ sudo npm install -g bunyan
  ```sql
  DB_NAME='pokemon_go' DB_USER='pokemon_go_role' DB_PASS='[YOUR PASS]' DB_PORT=5432 WS_PORT=9876 ERA=2  node app.js | bunyan -l info
  ```
-- Open another terminal window, and clone [this fork](https://github.com/Brideau/PokemonGo-Map/) of PokemonGo-Map using the command:
+- Open another terminal window, and clone [this fork](https://github.com/Brideau/PokemonGo-Map/) of PokemonGo-Map using the command (I had to add some extra data to their webhook json and am waiting on a pull request to go through):
 
 `git clone -b develop https://github.com/Brideau/PokemonGo-Map/`
 
