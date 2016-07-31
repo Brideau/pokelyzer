@@ -34,8 +34,10 @@ sudo npm install -g bunyan
  - When you start the server, ensure that the `-wh` parameter is included, as this tells PokemonGo-Map where to send the data as it comes in. In our case, it's the Pokelyzer Webhook App:
 
 ```
- python runserver.py -a ptc -u [Your Username] -p [Your Password] -l "Queen Street, Fredericton, New Brunswick, Canada" -st 25 -H 0.0.0.0 -k [Your Google API key] -wh http://localhost:9876
+ python runserver.py -a ptc -u [Your Username] -p [Your Password] -l "[Your Location]" -st 25 -H 0.0.0.0 -k [Your Google API key] -wh http://localhost:9876
 ```
+
+This should now start feeding data directly from PokemonGo-Map into your Pokelyzer Webhook listener, and then into your database.
 
 ## Patches
 
