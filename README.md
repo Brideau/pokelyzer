@@ -16,7 +16,7 @@ Once that's complete, return here to complete the remaining instructions.
  - Make sure npm is up-to-date by running `sudo npm install npm -g`
  - Pull the repo and install the dependencies:
 ```bash
-git clone https://github.com/Brideau/pokelyzer
+git clone -b version1-branch https://github.com/Brideau/pokelyzer
 cd ./pokelyzer
 npm install
 sudo npm install -g bunyan
