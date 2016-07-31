@@ -4,7 +4,13 @@ A data model for doing geospatial analysis and regular analytics on Pokemon Go d
 
 ![Tableau Screenshot of Spawn Points](http://i.imgur.com/xRY8bLn.png)
 
-## Installation Instructions
+## Webhook Listener Installation Instructions
+
+Before doing this, follow the instructions in the wiki page for setting up the database.
+
+**If you already have the database running, ensure all of the patches mentioned below since your installation date have been applied.**
+
+Once that's complete, return here to complete the remaining instructions.
 
  - [Install Node.js v4.X](https://nodejs.org/en/) using the installer on the home page or through [the command line](https://nodejs.org/en/download/package-manager/)
  - Make sure npm is up-to-date by running `sudo npm install npm -g`
@@ -13,14 +19,23 @@ A data model for doing geospatial analysis and regular analytics on Pokemon Go d
 git clone https://github.com/Brideau/pokelyzer
 cd ./pokelyzer
 npm install
+sudo npm install -g bunyan
 ```
 - Run using:
 
  ```sql
- DB_NAME='pokemon_go_node' DB_USER='pokemon_go_role' DB_PASS='[YOUR PASS]' DB_PORT=5432 WS_PORT=9876 ERA=2  node app.js | bunyan -l info
+ DB_NAME='pokemon_go' DB_USER='pokemon_go_role' DB_PASS='[YOUR PASS]' DB_PORT=5432 WS_PORT=9876 ERA=2  node app.js | bunyan -l info
  ```
+- Open another terminal window, and clone [this fork](https://github.com/Brideau/PokemonGo-Map/) of PokemonGo-Map using the command:
 
+`git clone -b develop https://github.com/Brideau/PokemonGo-Map/`
 
+ - Follow the instructions available in [their wiki](https://github.com/AHAAAAAAA/PokemonGo-Map/wiki) to complete the install, making sure it is in a separate directory from Pokelyzer
+ - When you start the server, ensure that the `-wh` parameter is included, as this tells PokemonGo-Map where to send the data as it comes in. In our case, it's the Pokelyzer Webhook App:
+
+```
+ python runserver.py -a ptc -u [Your Username] -p [Your Password] -l "Queen Street, Fredericton, New Brunswick, Canada" -st 25 -H 0.0.0.0 -k [Your Google API key] -wh http://localhost:9876
+```
 
 ## Patches
 
