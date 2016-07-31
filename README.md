@@ -4,7 +4,35 @@ A data model for doing geospatial analysis and regular analytics on Pokemon Go d
 
 ![Tableau Screenshot of Spawn Points](http://i.imgur.com/xRY8bLn.png)
 
+## Installation Instructions
+
+ - [Install Node.js v4.X](https://nodejs.org/en/)
+ - Make sure npm is up-to-date by running `sudo npm install npm -g`
+ - Pull the repo and install the dependencies
+```bash
+git clone https://github.com/Brideau/pokelyzer
+cd ./pokelyzer
+npm install
+```
+- Run using:
+
+ ```sql
+ DB_NAME='pokemon_go_node' DB_USER='pokemon_go_role' DB_PASS='[YOUR PASS]' DB_PORT=5432 WS_PORT=9876 ERA=2  node app.js | bunyan -l info
+ ```
+
 ## Patches
+
+### July 31, 2016
+
+This is a patch that makes the Pokelyzer capable of accepting data automatically pushed by PokemonGo-Map via its webhood interface.
+
+First, we'll drop the `Name` column from the `spotted_pokemon` table. This is redundant now because of our `pokemon_info` table. We also update the `_meta` table with the new schema version.
+
+```
+INSERT INTO _meta (db_version, last_update) VALUES ('v1.0-alpha', '2016-07-31');
+ALTER TABLE spotted_pokemon DROP COLUMN name;
+```
+
 
 ### Jul 30, 2016 ~4:45AM EDT
 
