@@ -107,10 +107,9 @@ app.post('/', function(req, res) {
           }
         });
       });
-
-      pool.on('error', function(err, client) {
-        log.error('Idle client error', err.message, err.stack);
-      });
-
     }
+});
+
+pool.on('error', function(err, client) {
+  log.error('Idle client error', err.message, err.stack);
 });
