@@ -8,7 +8,7 @@ A data model for doing geospatial analysis and regular analytics on Pokemon Go d
 
 Before doing this, follow the instructions in the wiki page for setting up the database.
 
-**If you already have the database running, ensure all of the patches mentioned below since your installation date have been applied.**
+**If you already have the database running, ensure all of the patches mentioned below since your installation date have been applied.** I wish there were better version control for databases, but this is the best solution I have for now. If you know of a better one, let me know.
 
 Once that's complete, return here to complete the remaining instructions.
 
