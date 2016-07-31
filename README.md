@@ -14,9 +14,9 @@ Once that's complete, return here to complete the remaining instructions.
 
  - [Install Node.js v4.X](https://nodejs.org/en/) using the installer on the home page or through [the command line](https://nodejs.org/en/download/package-manager/)
  - Make sure npm is up-to-date by running `sudo npm install npm -g`
- - Pull the repo and install the dependencies
+ - Pull the repo and install the dependencies:
 ```bash
-git clone https://github.com/Brideau/pokelyzer
+git clone -b version1-branch https://github.com/Brideau/pokelyzer
 cd ./pokelyzer
 npm install
 sudo npm install -g bunyan
@@ -26,7 +26,7 @@ sudo npm install -g bunyan
  ```sql
  DB_NAME='pokemon_go' DB_USER='pokemon_go_role' DB_PASS='[YOUR PASS]' DB_PORT=5432 WS_PORT=9876 ERA=2  node app.js | bunyan -l info
  ```
-- Open another terminal window, and clone [this fork](https://github.com/Brideau/PokemonGo-Map/) of PokemonGo-Map using the command:
+- Open another terminal window, and clone [this fork](https://github.com/Brideau/PokemonGo-Map/) of PokemonGo-Map using the command (I had to add some extra data to their webhook json and am waiting on a pull request to go through):
 
 `git clone -b develop https://github.com/Brideau/PokemonGo-Map/`
 
@@ -34,7 +34,7 @@ sudo npm install -g bunyan
  - When you start the server, ensure that the `-wh` parameter is included, as this tells PokemonGo-Map where to send the data as it comes in. In our case, it's the Pokelyzer Webhook App:
 
 ```
- python runserver.py -a ptc -u [Your Username] -p [Your Password] -l "Queen Street, Fredericton, New Brunswick, Canada" -st 25 -H 0.0.0.0 -k [Your Google API key] -wh http://localhost:9876
+ python runserver.py -a ptc -u [Your Username] -p [Your Password] -l "[Your Location]" -st 25 -H 0.0.0.0 -k [Your Google API key] -wh http://localhost:9876
 ```
 
 This should now start feeding data directly from PokemonGo-Map into your Pokelyzer Webhook listener, and then into your database.
