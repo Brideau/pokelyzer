@@ -4,9 +4,19 @@ A data model for doing geospatial analysis and regular analytics on Pokemon Go d
 
 ![Tableau Screenshot of Spawn Points](http://i.imgur.com/xRY8bLn.png)
 
+## Explanation
+
+These blog posts help to explain what Pokelyzer is, and what it can be used for.
+
+ - [The Original Concept](http://www.whackdata.com/2016/07/25/tool-for-analyzing-mapping-pokemon-go/)
+ - [Finding Hotpots for Locally Rare Pokemon Using Tableau](http://www.whackdata.com/2016/07/27/finding-locally-rare-pokemon/)
+ - [Help Others Find Rare Pokemon Nearby](http://www.whackdata.com/2016/07/29/help-others-find-rare-pokemon-nearby/)
+
+## Installation
+
 See the [wiki page](https://github.com/Brideau/pokelyzer/wiki) for installation instructions. 
 
-## Upgrading a Previous Installation
+## Upgrading
 
 If you already have the database running, ensure all of the patches below since your installation date have been applied. I wish there were better version control for databases, but this is the best solution I have for now. If you know of a better one, let me know.
 
