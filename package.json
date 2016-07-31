@@ -1,0 +1,25 @@
+{
+  "name": "pokelyzer",
+  "version": "v1.0.0-alpha",
+  "description": "Pokelyzer is a database and data model for doing geospatial analysis and regular analytics on Pokemon Go data.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Ryan Brideau",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Brideau/pokelyzer"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bunyan": "^1.8.1",
+    "express": "^4.14.0",
+    "gaussian": "^1.1.0",
+    "moment": "^2.14.1",
+    "pg": "^6.0.3"
+  },
+  "devDependencies": {}
+}

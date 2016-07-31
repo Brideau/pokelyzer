@@ -4,7 +4,54 @@ A data model for doing geospatial analysis and regular analytics on Pokemon Go d
 
 ![Tableau Screenshot of Spawn Points](http://i.imgur.com/xRY8bLn.png)
 
+## Webhook Listener Installation Instructions
+
+Before doing this, follow the instructions in the wiki page for setting up the database.
+
+**If you already have the database running, ensure all of the patches mentioned below since your installation date have been applied.**
+
+Once that's complete, return here to complete the remaining instructions.
+
+ - [Install Node.js v4.X](https://nodejs.org/en/) using the installer on the home page or through [the command line](https://nodejs.org/en/download/package-manager/)
+ - Make sure npm is up-to-date by running `sudo npm install npm -g`
+ - Pull the repo and install the dependencies:
+```bash
+git clone -b version1-branch https://github.com/Brideau/pokelyzer
+cd ./pokelyzer
+npm install
+sudo npm install -g bunyan
+```
+- Run using:
+
+ ```sql
+ DB_NAME='pokemon_go' DB_USER='pokemon_go_role' DB_PASS='[YOUR PASS]' DB_PORT=5432 WS_PORT=9876 ERA=2  node app.js | bunyan -l info
+ ```
+- Open another terminal window, and clone [this fork](https://github.com/Brideau/PokemonGo-Map/) of PokemonGo-Map using the command (I had to add some extra data to their webhook json and am waiting on a pull request to go through):
+
+`git clone -b develop https://github.com/Brideau/PokemonGo-Map/`
+
+ - Follow the instructions available in [their wiki](https://github.com/AHAAAAAAA/PokemonGo-Map/wiki) to complete the install, making sure it is in a separate directory from Pokelyzer
+ - When you start the server, ensure that the `-wh` parameter is included, as this tells PokemonGo-Map where to send the data as it comes in. In our case, it's the Pokelyzer Webhook App:
+
+```
+ python runserver.py -a ptc -u [Your Username] -p [Your Password] -l "[Your Location]" -st 25 -H 0.0.0.0 -k [Your Google API key] -wh http://localhost:9876
+```
+
+This should now start feeding data directly from PokemonGo-Map into your Pokelyzer Webhook listener, and then into your database.
+
 ## Patches
+
+### July 31, 2016
+
+This is a patch that makes the Pokelyzer capable of accepting data automatically pushed by PokemonGo-Map via its webhood interface.
+
+First, we'll drop the `Name` column from the `spotted_pokemon` table. This is redundant now because of our `pokemon_info` table. We also update the `_meta` table with the new schema version.
+
+```
+INSERT INTO _meta (db_version, last_update) VALUES ('v1.0-alpha', '2016-07-31');
+ALTER TABLE spotted_pokemon DROP COLUMN name;
+```
+
 
 ### Jul 30, 2016 ~4:45AM EDT
 
