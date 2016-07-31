@@ -54,6 +54,8 @@ app.post('/', function(req, res) {
       m.latitude_jittered = m.latitude + dist.ppf(Math.random()) * 0.0005;
       m.longitude_jittered = m.longitude + dist.ppf(Math.random()) * 0.0005;
 
+      debug.log(m);
+
       pool.connect(function(err, client, done) {
         if(err) {
           return log.error('Error fetching client from pool', err);
@@ -93,6 +95,8 @@ app.post('/', function(req, res) {
           hidden_time_unix_s = EXCLUDED.hidden_time_unix_s,
           hidden_time_utc = EXCLUDED.hidden_time_utc;`;
 
+        debug.log(query_string);
+        
         client.query(query_string,
         function(err, result) {
           done;
