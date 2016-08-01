@@ -12,7 +12,7 @@ var config = {
   user: process.env.DB_USER || 'pokemon_go_role',
   database: process.env.DB_NAME || 'pokemon_go',
   password: process.env.DB_PASS,
-  port: process.env.DB_PORT || DB_PORT,
+  port: process.env.DB_PORT || 5432,
   max: 20,
   idleTimeoutMillis: 30000
 }
