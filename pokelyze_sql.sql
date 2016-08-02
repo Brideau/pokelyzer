@@ -52,10 +52,6 @@ CREATE INDEX longitude_jit_index
   USING btree
   (longitude_jittered);
 
-CREATE INDEX name_index
-  ON public.spotted_pokemon
-  USING btree (name);
-
 CREATE INDEX point_index
   ON public.spotted_pokemon
   USING gist
@@ -85,6 +81,11 @@ CREATE INDEX pokemon_info_pokemon_id_idx
   ON public.pokemon_info
   USING btree
   (pokemon_id);
+
+CREATE INDEX pokemon_info_pokemon_name_index
+  ON public.pokemon_info
+  USING btree
+  (name);
 
 -------- The meta table for recording schema versions
 
