@@ -74,7 +74,8 @@ CREATE TABLE public.pokemon_info
   weight double precision,
   height double precision,
   CONSTRAINT pokemon_info_pkey PRIMARY KEY (pokemon_id)
-)
+);
+
 ALTER TABLE public.pokemon_info
 	OWNER TO pokemon_go_role;
 CREATE INDEX pokemon_info_pokemon_id_idx
