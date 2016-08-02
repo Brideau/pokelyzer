@@ -1,6 +1,6 @@
 # Pokelyzer
 
-A data model for doing geospatial analysis and regular analytics on Pokemon Go data.
+A webhook listener and database schema for doing geospatial analysis and advanced analytics on Pokemon Go data.
 
 ![Tableau Screenshot of Spawn Points](http://i.imgur.com/xRY8bLn.png)
 
@@ -12,11 +12,35 @@ These blog posts help to explain what Pokelyzer is, and what it can be used for.
  - [Finding Hotpots for Locally Rare Pokemon Using Tableau](http://www.whackdata.com/2016/07/27/finding-locally-rare-pokemon/)
  - [Help Others Find Rare Pokemon Nearby](http://www.whackdata.com/2016/07/29/help-others-find-rare-pokemon-nearby/)
 
+# The Database Schema
+
 The schema itself follows the approach of dimensional modelling to keep it fast and flexible. The entire schema currently looks like this:
 
 <img width="1062" alt="screen shot 2016-08-02 at 12 05 15 am" src="https://cloud.githubusercontent.com/assets/844397/17329922/1f6d9764-589b-11e6-9b89-13cf365cb53c.png">
 
 It looks like a lot, but it isn't. `spotted_pokemon` is where all your data goes. The `date_dimension` and `time_dimension` tables let you slice and filter by dates and times, and the `pokemon_info` table lets you do the same with Pokemon information. `_meta` keeps track of changes to the schema itself. `date_dimension`, `time_dimension`, `pokemon_info` and `_meta` all connect to the `spotted_pokemon` table.
+
+# The Webhook Listener
+
+The webhook listener is a node application that listens for POSTS to port 9876 by default, for JSON messages that look like this:
+
+```javascript
+{
+  "type": "pokemon",
+  "message": {
+    "encounter_id": "17290083747243295117",
+    "spawnpoint_id": "4ca42277a41",
+    "pokemon_id": "41",
+    "latitude": "45.9586350970765",
+    "longitude": "-66.6595416124465",
+    "disappear_time": "1469421912",
+    "last_modified_time": "1469421858380",
+    "time_until_hidden_ms": "54456"
+  }
+}
+```
+
+Where timestamps are in UNIX time.
 
 ## Installation
 
