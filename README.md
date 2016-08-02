@@ -12,6 +12,10 @@ These blog posts help to explain what Pokelyzer is, and what it can be used for.
  - [Finding Hotpots for Locally Rare Pokemon Using Tableau](http://www.whackdata.com/2016/07/27/finding-locally-rare-pokemon/)
  - [Help Others Find Rare Pokemon Nearby](http://www.whackdata.com/2016/07/29/help-others-find-rare-pokemon-nearby/)
 
+The schema itself follows the approach of dimensional modelling to keep it fast and flexible. The entire schema currently looks like this:
+
+<img width="1062" alt="screen shot 2016-08-02 at 12 05 15 am" src="https://cloud.githubusercontent.com/assets/844397/17329922/1f6d9764-589b-11e6-9b89-13cf365cb53c.png">
+
 ## Installation
 
 See the [wiki page](https://github.com/Brideau/pokelyzer/wiki) for installation instructions. 
