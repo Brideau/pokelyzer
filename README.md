@@ -16,6 +16,8 @@ The schema itself follows the approach of dimensional modelling to keep it fast 
 
 <img width="1062" alt="screen shot 2016-08-02 at 12 05 15 am" src="https://cloud.githubusercontent.com/assets/844397/17329922/1f6d9764-589b-11e6-9b89-13cf365cb53c.png">
 
+It looks like a lot, but it isn't. `spotted_pokemon` is where all your data goes. The `date_dimension` and `time_dimension` tables let you slice and filter by dates and times, and the `pokemon_info` table lets you do the same with Pokemon information. `_meta` keeps track of changes to the schema itself. `date_dimension`, `time_dimension`, `pokemon_info` and `_meta` all connect to the `spotted_pokemon` table.
+
 ## Installation
 
 See the [wiki page](https://github.com/Brideau/pokelyzer/wiki) for installation instructions. 
