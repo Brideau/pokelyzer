@@ -18,6 +18,8 @@ var config = {
 }
 var pool = new pg.Pool(config);
 
+var encounter_encoded = process.env.ENC_ENC || "t";
+
 var log = bunyan.createLogger({
   name: 'MainApp',
   streams: [
@@ -54,7 +56,12 @@ app.post('/', function(req, res) {
       m.latitude_jittered = m.latitude + dist.ppf(Math.random()) * 0.0005;
       m.longitude_jittered = m.longitude + dist.ppf(Math.random()) * 0.0005;
 
-      log.debug(m);
+      if (encounter_encoded == "t") {
+        buff = new Buffer(m.encounter_id, 'base64');
+        m.encounter_id = buff.toString();
+      }
+
+      log.debug(m.encounter_id);
 
       pool.connect(function(err, client, done) {
         if(err) {
@@ -96,7 +103,7 @@ app.post('/', function(req, res) {
           hidden_time_utc = EXCLUDED.hidden_time_utc;";
 
         log.info("Pokemon with ID " + m.pokemon_id + " found.")
-        log.debug(query_string);
+        log.trace(query_string);
 
         client.query(query_string,
         function(err, result) {
