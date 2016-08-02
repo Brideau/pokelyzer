@@ -1,152 +1,152 @@
-"pokemon_id","name","classification","type_1","type_2","weight","height"
-"1","Bulbasaur","Seed Pokémon","Grass","Poison","6.9","0.7"
-"2","Ivysaur","Seed Pokémon","Grass","Poison","13.0","1.0"
-"3","Venusaur","Seed Pokémon","Grass","Poison","1.0","2.0"
-"4","Charmander","Lizard Pokémon","Fire","N/A","8.5","0.6"
-"5","Charmeleon","Flame Pokémon","Fire","N/A","19.0","1.1"
-"6","Charizard","Flame Pokémon","Fire","Flying","90.5","1.7"
-"7","Squirtle","Tiny Turtle Pokémon","Water","N/A","9.0","0.5"
-"8","Wartortle","Turtle Pokémon","Water","N/A","22.5","1.0"
-"9","Blastoise","Shellfish Pokémon","Water","N/A","85.5","1.6"
-"10","Caterpie","Worm Pokémon","Bug","N/A","2.9","0.3"
-"11","Metapod","Cocoon Pokémon","Bug","N/A","9.9","0.7"
-"12","Butterfree","Butterfly Pokémon","Bug","Flying","32.0","1.1"
-"13","Weedle","Hairy Pokémon","Bug","Poison","3.2","0.3"
-"14","Kakuna","Cocoon Pokémon","Bug","Poison","10.0","0.6"
-"15","Beedrill","Poison Bee Pokémon","Bug","Poison","29.5","1.0"
-"16","Pidgey","Tiny Bird Pokémon","Normal","Flying","1.8","0.3"
-"17","Pidgeotto","Bird Pokémon","Normal","Flying","30.0","1.1"
-"18","Pidgeot","Bird Pokémon","Normal","Flying","39.5","1.5"
-"19","Rattata","Mouse Pokémon","Normal","N/A","3.5","0.3"
-"20","Raticate","Mouse Pokémon","Normal","N/A","18.5","0.7"
-"21","Spearow","Tiny Bird Pokémon","Normal","Flying","2.0","0.3"
-"22","Fearow","Beak Pokémon","Normal","Flying","38.0","1.2"
-"23","Ekans","Snake Pokémon","Poison","N/A","6.9","2.0"
-"24","Arbok","Cobra Pokémon","Poison","N/A","65.0","3.5"
-"25","Pikachu","Mouse Pokémon","Electric","N/A","6.0","0.4"
-"26","Raichu","Mouse Pokémon","Electric","N/A","30.0","0.8"
-"27","Sandshrew","Mouse Pokémon","Ground","N/A","12.0","0.6"
-"28","Sandslash","Mouse Pokémon","Ground","N/A","29.5","1.0"
-"29","Nidoran F","Poison Pin Pokémon","Poison","N/A","7.0","0.4"
-"30","Nidorina","Poison Pin Pokémon","Poison","N/A","20.0","0.8"
-"31","Nidoqueen","Drill Pokémon","Poison","Ground","60.0","1.3"
-"32","Nidoran M","Poison Pin Pokémon","Poison","N/A","9.0","0.5"
-"33","Nidorino","Poison Pin Pokémon","Poison","N/A","19.5","0.9"
-"34","Nidoking","Drill Pokémon","Poison","Ground","62.0","1.4"
-"35","Clefairy","Fairy Pokémon","Normal","N/A","7.5","0.6"
-"36","Clefable","Fairy Pokémon","Normal","N/A","40.0","1.3"
-"37","Vulpix","Fox Pokémon","Fire","N/A","9.9","0.6"
-"38","Ninetales","Fox Pokémon","Fire","N/A","19.9","1.1"
-"39","Jigglypuff","Balloon Pokémon","Normal","N/A","5.5","0.5"
-"40","Wigglytuff","Balloon Pokémon","Normal","N/A","12.0","1.0"
-"41","Zubat","Bat Pokémon","Poison","Flying","7.5","0.8"
-"42","Golbat","Bat Pokémon","Poison","Flying","55.0","1.6"
-"43","Oddish","Weed Pokémon","Grass","Poison","5.4","0.5"
-"44","Gloom","Weed Pokémon","Grass","Poison","8.6","0.8"
-"45","Vileplume","Flower Pokémon","Grass","Poison","18.6","1.2"
-"46","Paras","Mushroom Pokémon","Bug","Grass","5.4","0.3"
-"47","Parasect","Mushroom Pokémon","Bug","Grass","29.5","1.0"
-"48","Venonat","Insect Pokémon","Bug","Poison","30.0","1.0"
-"49","Venomoth","Poison Moth Pokémon","Bug","Poison","12.5","1.5"
-"50","Diglett","Mole Pokémon","Ground","N/A","0.8","0.2"
-"51","Dugtrio","Mole Pokémon","Ground","N/A","33.3","0.7"
-"52","Meowth","Scratch Cat Pokémon","Normal","N/A","4.2","0.4"
-"53","Persian","Classy Cat Pokémon","Normal","N/A","32.0","1.0"
-"54","Psyduck","Duck Pokémon","Water","N/A","19.6","0.8"
-"55","Golduck","Duck Pokémon","Water","N/A","76.6","1.7"
-"56","Mankey","Pig Monkey Pokémon","Fighting","N/A","28.0","0.5"
-"57","Primeape","Pig Monkey Pokémon","Fighting","N/A","32.0","1.0"
-"58","Growlithe","Puppy Pokémon","Fire","N/A","19.0","0.7"
-"59","Arcanine","Legendary Pokémon","Fire","N/A","155.0","1.9"
-"60","Poliwag","Tadpole Pokémon","Water","N/A","12.4","0.6"
-"61","Poliwhirl","Tadpole Pokémon","Water","N/A","20.0","1.0"
-"62","Poliwrath","Tadpole Pokémon","Water","Fighting","54.0","1.3"
-"63","Abra","Psi Pokémon","Psychic","N/A","19.5","0.9"
-"64","Kadabra","Psi Pokémon","Psychic","N/A","56.5","1.3"
-"65","Alakazam","Psi Pokémon","Psychic","N/A","48.0","1.5"
-"66","Machop","Superpower Pokémon","Fighting","N/A","19.5","0.8"
-"67","Machoke","Superpower Pokémon","Fighting","N/A","70.5","1.5"
-"68","Machamp","Superpower Pokémon","Fighting","N/A","130.0","1.6"
-"69","Bellsprout","Flower Pokémon","Grass","Poison","4.0","0.7"
-"70","Weepinbell","Flycatcher Pokémon","Grass","Poison","6.4","1.0"
-"71","Victreebel","Flycatcher Pokémon","Grass","Poison","15.5","1.7"
-"72","Tentacool","Jellyfish Pokémon","Water","Poison","45.5","0.9"
-"73","Tentacruel","Jellyfish Pokémon","Water","Poison","55.0","1.6"
-"74","Geodude","Rock Pokémon","Rock","Ground","20.0","0.4"
-"75","Graveler","Rock Pokémon","Rock","Ground","105.0","1.0"
-"76","Golem","Megaton Pokémon","Rock","Ground","300.0","1.4"
-"77","Ponyta","Fire Horse Pokémon","Fire","N/A","30.0","1.0"
-"78","Rapidash","Fire Horse Pokémon","Fire","N/A","95.0","1.7"
-"79","Slowpoke","Dopey Pokémon","Water","Psychic","36.0","1.2"
-"80","Slowbro","Hermit Crab Pokémon","Water","Psychic","78.5","1.6"
-"81","Magnemite","Magnet Pokémon","Electric","Steel","6.0","0.3"
-"82","Magneton","Magnet Pokémon","Electric","Steel","60.0","1.0"
-"83","Farfetch'd","Wild Duck Pokémon","Normal","Flying","15.0","0.8"
-"84","Doduo","Twin Bird Pokémon","Normal","Flying","39.2","1.4"
-"85","Dodrio","Triple Bird Pokémon","Normal","Flying","85.2","1.8"
-"86","Seel","Sea Lion Pokémon","Water","N/A","90.0","1.1"
-"87","Dewgong","Sea Lion Pokémon","Water","Ice","120.0","1.7"
-"88","Grimer","Sludge Pokémon","Poison","N/A","30.0","0.9"
-"89","Muk","Sludge Pokémon","Poison","N/A","30.0","1.2"
-"90","Shellder","Bivalve Pokémon","Water","N/A","4.0","0.3"
-"91","Cloyster","Bivalve Pokémon","Water","Ice","132.5","1.5"
-"92","Gastly","Gas Pokémon","Ghost","Poison","0.1","1.3"
-"93","Haunter","Gas Pokémon","Ghost","Poison","0.1","1.6"
-"94","Gengar","Shadow Pokémon","Ghost","Poison","40.5","1.5"
-"95","Onix","Rock Snake Pokémon","Rock","Ground","210.0","8.8"
-"96","Drowzee","Hypnosis Pokémon","Psychic","N/A","32.4","1.0"
-"97","Hypno","Hypnosis Pokémon","Psychic","N/A","75.6","1.6"
-"98","Krabby","River Crab Pokémon","Water","N/A","6.5","0.4"
-"99","Kingler","Pincer Pokémon","Water","N/A","60.0","1.3"
-"100","Voltorb","Ball Pokémon","Electric","N/A","10.4","0.5"
-"101","Electrode","Ball Pokémon","Electric","N/A","66.6","1.2"
-"102","Exeggcute","Egg Pokémon","Grass","Psychic","2.5","0.4"
-"103","Exeggutor","Coconut Pokémon","Grass","Psychic","120.0","2.0"
-"104","Cubone","Lonely Pokémon","Ground","N/A","6.5","0.4"
-"105","Marowak","Bone Keeper Pokémon","Ground","N/A","45.0","1.0"
-"106","Hitmonlee","Kicking Pokémon","Fighting","N/A","49.8","1.5"
-"107","Hitmonchan","Punching Pokémon","Fighting","N/A","50.2","1.4"
-"108","Lickitung","Licking Pokémon","Normal","N/A","65.5","1.2"
-"109","Koffing","Poison Gas Pokémon","Poison","N/A","1.0","0.6"
-"110","Weezing","Poison Gas Pokémon","Poison","N/A","9.5","1.2"
-"111","Rhyhorn","Spikes Pokémon","Ground","Rock","115.0","1.0"
-"112","Rhydon","Drill Pokémon","Ground","Rock","120.0","1.9"
-"113","Chansey","Egg Pokémon","Normal","N/A","34.6","1.1"
-"114","Tangela","Vine Pokémon","Grass","N/A","35.0","1.0"
-"115","Kangaskhan","Parent Pokémon","Normal","N/A","80.0","2.2"
-"116","Horsea","Dragon Pokémon","Water","N/A","8.0","0.4"
-"117","Seadra","Dragon Pokémon","Water","N/A","25.0","1.2"
-"118","Goldeen","Goldfish Pokémon","Water","N/A","15.0","0.6"
-"119","Seaking","Goldfish Pokémon","Water","N/A","39.0","1.3"
-"120","Staryu","Starshape Pokémon","Water","N/A","34.5","0.8"
-"121","Starmie","Mysterious Pokémon","Water","Psychic","80.0","1.1"
-"122","Mr. Mime","Barrier Pokémon","Psychic","N/A","54.5","1.3"
-"123","Scyther","Mantis Pokémon","Bug","Flying","56.0","1.5"
-"124","Jynx","Humanshape Pokémon","Ice","Psychic","40.6","1.4"
-"125","Electabuzz","Electric Pokémon","Electric","N/A","30.0","1.1"
-"126","Magmar","Spitfire Pokémon","Fire","N/A","44.5","1.3"
-"127","Pinsir","Stagbeetle Pokémon","Bug","N/A","55.0","1.5"
-"128","Tauros","Wild Bull Pokémon","Normal","N/A","88.4","1.4"
-"129","Magikarp","Fish Pokémon","Water","N/A","10.0","0.9"
-"130","Gyarados","Atrocious Pokémon","Water","Flying","235.0","6.5"
-"131","Lapras","Transport Pokémon","Water","Ice","220.0","2.5"
-"132","Ditto","Transform Pokémon","Normal","N/A","4.0","0.3"
-"133","Eevee","Evolution Pokémon","Normal","N/A","6.5","0.3"
-"134","Vaporeon","Bubble Jet Pokémon","Water","N/A","29.0","1.0"
-"135","Jolteon","Lightning Pokémon","Electric","N/A","24.5","0.8"
-"136","Flareon","Flame Pokémon","Fire","N/A","25.0","0.9"
-"137","Porygon","Virtual Pokémon","Normal","N/A","36.5","0.8"
-"138","Omanyte","Spiral Pokémon","Rock","Water","7.5","0.4"
-"139","Omastar","Spiral Pokémon","Rock","Water","35.0","1.0"
-"140","Kabuto","Shellfish Pokémon","Rock","Water","11.5","0.5"
-"141","Kabutops","Shellfish Pokémon","Rock","Water","40.5","1.3"
-"142","Aerodactyl","Fossil Pokémon","Rock","Flying","59.0","1.8"
-"143","Snorlax","Sleeping Pokémon","Normal","N/A","460.0","2.1"
-"144","Articuno","Freeze Pokémon","Ice","Flying","55.4","1.7"
-"145","Zapdos","Electric Pokémon","Electric","Flying","52.6","1.6"
-"146","Moltres","Flame Pokémon","Fire","Flying","60.0","2.0"
-"147","Dratini","Dragon Pokémon","Dragon","N/A","3.3","1.8"
-"148","Dragonair","Dragon Pokémon","Dragon","N/A","16.5","4.0"
-"149","Dragonite","Dragon Pokémon","Dragon","Flying","210.0","2.2"
-"150","Mewtwo","Genetic Pokémon","Psychic","N/A","122.0","2.0"
-"151","Mew","New Species Pokémon","Psychic","N/A","4.0","0.4"
+pokemon_id,name,classification,type_1,type_2,weight,height,rarity
+1,Bulbasaur,Seed Pokémon,Grass,Poison,6.9,0.7,Uncommon
+2,Ivysaur,Seed Pokémon,Grass,Poison,13,1,Special
+3,Venusaur,Seed Pokémon,Grass,Poison,1,2,Epic
+4,Charmander,Lizard Pokémon,Fire,N/A,8.5,0.6,Uncommon
+5,Charmeleon,Flame Pokémon,Fire,N/A,19,1.1,Special
+6,Charizard,Flame Pokémon,Fire,Flying,90.5,1.7,Epic
+7,Squirtle,Tiny Turtle Pokémon,Water,N/A,9,0.5,Uncommon
+8,Wartortle,Turtle Pokémon,Water,N/A,22.5,1,Special
+9,Blastoise,Shellfish Pokémon,Water,N/A,85.5,1.6,Epic
+10,Caterpie,Worm Pokémon,Bug,N/A,2.9,0.3,Very Common
+11,Metapod,Cocoon Pokémon,Bug,N/A,9.9,0.7,Common
+12,Butterfree,Butterfly Pokémon,Bug,Flying,32,1.1,Uncommon
+13,Weedle,Hairy Pokémon,Bug,Poison,3.2,0.3,Very Common
+14,Kakuna,Cocoon Pokémon,Bug,Poison,10,0.6,Common
+15,Beedrill,Poison Bee Pokémon,Bug,Poison,29.5,1,Uncommon
+16,Pidgey,Tiny Bird Pokémon,Normal,Flying,1.8,0.3,Very Common
+17,Pidgeotto,Bird Pokémon,Normal,Flying,30,1.1,Common
+18,Pidgeot,Bird Pokémon,Normal,Flying,39.5,1.5,Uncommon
+19,Rattata,Mouse Pokémon,Normal,N/A,3.5,0.3,Very Common
+20,Raticate,Mouse Pokémon,Normal,N/A,18.5,0.7,Common
+21,Spearow,Tiny Bird Pokémon,Normal,Flying,2,0.3,Very Common
+22,Fearow,Beak Pokémon,Normal,Flying,38,1.2,Uncommon
+23,Ekans,Snake Pokémon,Poison,N/A,6.9,2,Very Common
+24,Arbok,Cobra Pokémon,Poison,N/A,65,3.5,Common
+25,Pikachu,Mouse Pokémon,Electric,N/A,6,0.4,Uncommon
+26,Raichu,Mouse Pokémon,Electric,N/A,30,0.8,Very Rare
+27,Sandshrew,Mouse Pokémon,Ground,N/A,12,0.6,Very Common
+28,Sandslash,Mouse Pokémon,Ground,N/A,29.5,1,Common
+29,Nidoran F,Poison Pin Pokémon,Poison,N/A,7,0.4,Very Common
+30,Nidorina,Poison Pin Pokémon,Poison,N/A,20,0.8,Uncommon
+31,Nidoqueen,Drill Pokémon,Poison,Ground,60,1.3,Very Rare
+32,Nidoran M,Poison Pin Pokémon,Poison,N/A,9,0.5,Very Common
+33,Nidorino,Poison Pin Pokémon,Poison,N/A,19.5,0.9,Uncommon
+34,Nidoking,Drill Pokémon,Poison,Ground,62,1.4,Very Rare
+35,Clefairy,Fairy Pokémon,Normal,N/A,7.5,0.6,Common
+36,Clefable,Fairy Pokémon,Normal,N/A,40,1.3,Epic
+37,Vulpix,Fox Pokémon,Fire,N/A,9.9,0.6,Common
+38,Ninetales,Fox Pokémon,Fire,N/A,19.9,1.1,Uncommon
+39,Jigglypuff,Balloon Pokémon,Normal,N/A,5.5,0.5,Common
+40,Wigglytuff,Balloon Pokémon,Normal,N/A,12,1,Uncommon
+41,Zubat,Bat Pokémon,Poison,Flying,7.5,0.8,Very Common
+42,Golbat,Bat Pokémon,Poison,Flying,55,1.6,Common
+43,Oddish,Weed Pokémon,Grass,Poison,5.4,0.5,Very Common
+44,Gloom,Weed Pokémon,Grass,Poison,8.6,0.8,Uncommon
+45,Vileplume,Flower Pokémon,Grass,Poison,18.6,1.2,Very Rare
+46,Paras,Mushroom Pokémon,Bug,Grass,5.4,0.3,Very Common
+47,Parasect,Mushroom Pokémon,Bug,Grass,29.5,1,Uncommon
+48,Venonat,Insect Pokémon,Bug,Poison,30,1,Very Common
+49,Venomoth,Poison Moth Pokémon,Bug,Poison,12.5,1.5,Very Rare
+50,Diglett,Mole Pokémon,Ground,N/A,0.8,0.2,Common
+51,Dugtrio,Mole Pokémon,Ground,N/A,33.3,0.7,Uncommon
+52,Meowth,Scratch Cat Pokémon,Normal,N/A,4.2,0.4,Very Common
+53,Persian,Classy Cat Pokémon,Normal,N/A,32,1,Common
+54,Psyduck,Duck Pokémon,Water,N/A,19.6,0.8,Common
+55,Golduck,Duck Pokémon,Water,N/A,76.6,1.7,Uncommon
+56,Mankey,Pig Monkey Pokémon,Fighting,N/A,28,0.5,Very Common
+57,Primeape,Pig Monkey Pokémon,Fighting,N/A,32,1,Uncommon
+58,Growlithe,Puppy Pokémon,Fire,N/A,19,0.7,Common
+59,Arcanine,Legendary Pokémon,Fire,N/A,155,1.9,Rare
+60,Poliwag,Tadpole Pokémon,Water,N/A,12.4,0.6,Very Common
+61,Poliwhirl,Tadpole Pokémon,Water,N/A,20,1,Uncommon
+62,Poliwrath,Tadpole Pokémon,Water,Fighting,54,1.3,Very Rare
+63,Abra,Psi Pokémon,Psychic,N/A,19.5,0.9,Common
+64,Kadabra,Psi Pokémon,Psychic,N/A,56.5,1.3,Uncommon
+65,Alakazam,Psi Pokémon,Psychic,N/A,48,1.5,Very Rare
+66,Machop,Superpower Pokémon,Fighting,N/A,19.5,0.8,Very Common
+67,Machoke,Superpower Pokémon,Fighting,N/A,70.5,1.5,Common
+68,Machamp,Superpower Pokémon,Fighting,N/A,130,1.6,Uncommon
+69,Bellsprout,Flower Pokémon,Grass,Poison,4,0.7,Very Common
+70,Weepinbell,Flycatcher Pokémon,Grass,Poison,6.4,1,Rare
+71,Victreebel,Flycatcher Pokémon,Grass,Poison,15.5,1.7,Very Rare
+72,Tentacool,Jellyfish Pokémon,Water,Poison,45.5,0.9,Common
+73,Tentacruel,Jellyfish Pokémon,Water,Poison,55,1.6,Uncommon
+74,Geodude,Rock Pokémon,Rock,Ground,20,0.4,Very Common
+75,Graveler,Rock Pokémon,Rock,Ground,105,1,Common
+76,Golem,Megaton Pokémon,Rock,Ground,300,1.4,Uncommon
+77,Ponyta,Fire Horse Pokémon,Fire,N/A,30,1,Common
+78,Rapidash,Fire Horse Pokémon,Fire,N/A,95,1.7,Rare
+79,Slowpoke,Dopey Pokémon,Water,Psychic,36,1.2,Very Common
+80,Slowbro,Hermit Crab Pokémon,Water,Psychic,78.5,1.6,Rare
+81,Magnemite,Magnet Pokémon,Electric,Steel,6,0.3,Very Common
+82,Magneton,Magnet Pokémon,Electric,Steel,60,1,Common
+83,Farfetch'd,Wild Duck Pokémon,Normal,Flying,15,0.8,Rare
+84,Doduo,Twin Bird Pokémon,Normal,Flying,39.2,1.4,Common
+85,Dodrio,Triple Bird Pokémon,Normal,Flying,85.2,1.8,Uncommon
+86,Seel,Sea Lion Pokémon,Water,N/A,90,1.1,Common
+87,Dewgong,Sea Lion Pokémon,Water,Ice,120,1.7,Very Rare
+88,Grimer,Sludge Pokémon,Poison,N/A,30,0.9,Common
+89,Muk,Sludge Pokémon,Poison,N/A,30,1.2,Rare
+90,Shellder,Bivalve Pokémon,Water,N/A,4,0.3,Common
+91,Cloyster,Bivalve Pokémon,Water,Ice,132.5,1.5,Uncommon
+92,Gastly,Gas Pokémon,Ghost,Poison,0.1,1.3,Uncommon
+93,Haunter,Gas Pokémon,Ghost,Poison,0.1,1.6,Common
+94,Gengar,Shadow Pokémon,Ghost,Poison,40.5,1.5,Very Rare
+95,Onix,Rock Snake Pokémon,Rock,Ground,210,8.8,Rare
+96,Drowzee,Hypnosis Pokémon,Psychic,N/A,32.4,1,Common
+97,Hypno,Hypnosis Pokémon,Psychic,N/A,75.6,1.6,Uncommon
+98,Krabby,River Crab Pokémon,Water,N/A,6.5,0.4,Very Common
+99,Kingler,Pincer Pokémon,Water,N/A,60,1.3,Rare
+100,Voltorb,Ball Pokémon,Electric,N/A,10.4,0.5,Very Common
+101,Electrode,Ball Pokémon,Electric,N/A,66.6,1.2,Common
+102,Exeggcute,Egg Pokémon,Grass,Psychic,2.5,0.4,Common
+103,Exeggutor,Coconut Pokémon,Grass,Psychic,120,2,Rare
+104,Cubone,Lonely Pokémon,Ground,N/A,6.5,0.4,Common
+105,Marowak,Bone Keeper Pokémon,Ground,N/A,45,1,Very Rare
+106,Hitmonlee,Kicking Pokémon,Fighting,N/A,49.8,1.5,Common
+107,Hitmonchan,Punching Pokémon,Fighting,N/A,50.2,1.4,Uncommon
+108,Lickitung,Licking Pokémon,Normal,N/A,65.5,1.2,Uncommon
+109,Koffing,Poison Gas Pokémon,Poison,N/A,1,0.6,Common
+110,Weezing,Poison Gas Pokémon,Poison,N/A,9.5,1.2,Uncommon
+111,Rhyhorn,Spikes Pokémon,Ground,Rock,115,1,Common
+112,Rhydon,Drill Pokémon,Ground,Rock,120,1.9,Rare
+113,Chansey,Egg Pokémon,Normal,N/A,34.6,1.1,Uncommon
+114,Tangela,Vine Pokémon,Grass,N/A,35,1,Rare
+115,Kangaskhan,Parent Pokémon,Normal,N/A,80,2.2,Very Rare
+116,Horsea,Dragon Pokémon,Water,N/A,8,0.4,Common
+117,Seadra,Dragon Pokémon,Water,N/A,25,1.2,Uncommon
+118,Goldeen,Goldfish Pokémon,Water,N/A,15,0.6,Very Common
+119,Seaking,Goldfish Pokémon,Water,N/A,39,1.3,Uncommon
+120,Staryu,Starshape Pokémon,Water,N/A,34.5,0.8,Common
+121,Starmie,Mysterious Pokémon,Water,Psychic,80,1.1,Uncommon
+122,Mr. Mime,Barrier Pokémon,Psychic,N/A,54.5,1.3,Rare
+123,Scyther,Mantis Pokémon,Bug,Flying,56,1.5,Uncommon
+124,Jynx,Humanshape Pokémon,Ice,Psychic,40.6,1.4,Common
+125,Electabuzz,Electric Pokémon,Electric,N/A,30,1.1,Very Rare
+126,Magmar,Spitfire Pokémon,Fire,N/A,44.5,1.3,Rare
+127,Pinsir,Stagbeetle Pokémon,Bug,N/A,55,1.5,Rare
+128,Tauros,Wild Bull Pokémon,Normal,N/A,88.4,1.4,Epic
+129,Magikarp,Fish Pokémon,Water,N/A,10,0.9,Very Common
+130,Gyarados,Atrocious Pokémon,Water,Flying,235,6.5,Very Rare
+131,Lapras,Transport Pokémon,Water,Ice,220,2.5,Very Rare
+132,Ditto,Transform Pokémon,Normal,N/A,4,0.3,Legendary
+133,Eevee,Evolution Pokémon,Normal,N/A,6.5,0.3,Common
+134,Vaporeon,Bubble Jet Pokémon,Water,N/A,29,1,Very Rare
+135,Jolteon,Lightning Pokémon,Electric,N/A,24.5,0.8,Very Rare
+136,Flareon,Flame Pokémon,Fire,N/A,25,0.9,Very Rare
+137,Porygon,Virtual Pokémon,Normal,N/A,36.5,0.8,Special
+138,Omanyte,Spiral Pokémon,Rock,Water,7.5,0.4,Special
+139,Omastar,Spiral Pokémon,Rock,Water,35,1,Epic
+140,Kabuto,Shellfish Pokémon,Rock,Water,11.5,0.5,Uncommon
+141,Kabutops,Shellfish Pokémon,Rock,Water,40.5,1.3,Very Rare
+142,Aerodactyl,Fossil Pokémon,Rock,Flying,59,1.8,Special
+143,Snorlax,Sleeping Pokémon,Normal,N/A,460,2.1,Rare
+144,Articuno,Freeze Pokémon,Ice,Flying,55.4,1.7,Legendary
+145,Zapdos,Electric Pokémon,Electric,Flying,52.6,1.6,Legendary
+146,Moltres,Flame Pokémon,Fire,Flying,60,2,Legendary
+147,Dratini,Dragon Pokémon,Dragon,N/A,3.3,1.8,Uncommon
+148,Dragonair,Dragon Pokémon,Dragon,N/A,16.5,4,Very Rare
+149,Dragonite,Dragon Pokémon,Dragon,Flying,210,2.2,Epic
+150,Mewtwo,Genetic Pokémon,Psychic,N/A,122,2,Legendary
+151,Mew,New Species Pokémon,Psychic,N/A,4,0.4,Legendary

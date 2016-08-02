@@ -44,7 +44,7 @@ Where timestamps are in UNIX time.
 
 ## Installation
 
-See the [wiki page](https://github.com/Brideau/pokelyzer/wiki) for installation instructions. 
+See the [wiki page](https://github.com/Brideau/pokelyzer/wiki) for installation instructions.
 
 ## Upgrading
 
@@ -53,6 +53,18 @@ If you already have the database running, ensure all of the patches below since 
 To use the webhook listener, I recommend doing a fresh installation of PokemonGo-Map using the instructions prodvided in [the wiki ](https://github.com/Brideau/pokelyzer/wiki). Just rename your current directory to something else and do the install. No data will be lost from Pokelyzer since that's stored separately from the PokemonGo-Map database.
 
 ## Patches
+
+Before you try to do recent tutorials or install new versions of the webhook listener, please install all patches **since your installation date**.
+
+### Aug 2, 2016
+
+I've updated the `pokemon_info` table so that you can now use the `rarity` property in your visualizations based on [this visualization](http://i.imgur.com/Qmx2vF2.jpg). (Thanks Niklas for the help!) To update, just drop the current `pokemon_info` using this command, or right clicking and Delete/Droping it in pgAdmin:
+
+```sql
+DROP TABLE public.pokemon_info;
+```
+
+And then use the same Restore feature you used to load the database initially to load the [pokemon_into_table_patch_2.tar file](https://github.com/Brideau/pokelyzer/raw/master/patches/pokemon_info_table_patch_2.tar) available in patches folder above.
 
 ### July 31, 2016
 
@@ -93,16 +105,6 @@ ALTER TABLE spotted_pokemon ADD CONSTRAINT encounter_id_unique UNIQUE (encounter
 Then update your [customLog.py file with the one from the Pokelyzer v0.3-alpha release](https://github.com/Brideau/pokelyzer/blob/v0.3-alpha/sample_customLog.py).
 
 Start your server back up!
-
-### Jul 28, 2016 ~12PM EDT
-
-I've added a table for doing analysis using various Pokemon properties, such as type, classification, weight and height. To patch an existing database to support this, first drop the existing pokemon_info table from pgAdmin or using:
-
-```sql
-DROP TABLE public.pokemon_info;
-```
-
-And then use the same Restore feature you used to load the database initially to load the [pokemon_into_table_patch.tar file](https://github.com/Brideau/pokelyzer/raw/master/patches/pokemon_info_table_patch.tar) available in patches folder above.
 
 ### Jul 27, 2016 ~11PM EDT
 
