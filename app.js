@@ -108,6 +108,7 @@ app.post('/', function(req, res) {
         });
       });
     }
+    res.sendStatus(200);
 });
 
 pool.on('error', function(err, client) {
