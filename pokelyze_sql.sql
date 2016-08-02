@@ -20,7 +20,7 @@ CREATE TABLE public.spotted_pokemon(
 	pokemon_go_era integer,
 	meta_db_version text DEFAULT 'not versioned'::text,
 	meta_row_insertion_time timestamp without time zone,
-	CONSTRAINT encounter_id_unique UNIQUE (encounter_id)
+	CONSTRAINT encounter_id_unique UNIQUE (encounter_id),
 	CONSTRAINT id_primary_key PRIMARY KEY (id)
 
 );
