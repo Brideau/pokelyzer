@@ -210,8 +210,6 @@ EXECUTE PROCEDURE get_db_version();
 
 -- Log the time each record was recorded
 
-ALTER TABLE spotted_pokemon ADD COLUMN meta_row_insertion_time timestamp;
-
 CREATE OR REPLACE FUNCTION get_row_insertion_time()
 RETURNS trigger
 LANGUAGE plpgsql
