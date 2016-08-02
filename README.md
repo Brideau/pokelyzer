@@ -12,7 +12,7 @@ These blog posts help to explain what Pokelyzer is, and what it can be used for.
  - [Finding Hotpots for Locally Rare Pokemon Using Tableau](http://www.whackdata.com/2016/07/27/finding-locally-rare-pokemon/)
  - [Help Others Find Rare Pokemon Nearby](http://www.whackdata.com/2016/07/29/help-others-find-rare-pokemon-nearby/)
 
-# The Database Schema
+## The Database Schema
 
 The schema itself follows the approach of dimensional modelling to keep it fast and flexible. The entire schema currently looks like this:
 
@@ -20,7 +20,7 @@ The schema itself follows the approach of dimensional modelling to keep it fast 
 
 It looks like a lot, but it isn't. `spotted_pokemon` is where all your data goes. The `date_dimension` and `time_dimension` tables let you slice and filter by dates and times, and the `pokemon_info` table lets you do the same with Pokemon information. `_meta` keeps track of changes to the schema itself. `date_dimension`, `time_dimension`, `pokemon_info` and `_meta` all connect to the `spotted_pokemon` table.
 
-# The Webhook Listener
+## The Webhook Listener
 
 The webhook listener is a node application that listens for POSTS to port 9876 by default, for JSON messages that look like this:
 
