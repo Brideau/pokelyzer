@@ -24,6 +24,10 @@ var log = bunyan.createLogger({
     {
       level: 'info',
       stream: process.stdout
+    },
+    {
+     level: 'warn',
+     stream: process.stdout
     }
   ]
 });
