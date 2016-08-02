@@ -58,7 +58,7 @@ Before you try to do recent tutorials or install new versions of the webhook lis
 
 ### Aug 2, 2016
 
-I've updated the `pokemon_info` table so that you can now use the `rarity` property in your visualizations based on [this visualization](http://i.imgur.com/Qmx2vF2.jpg). (Thanks Niklas for the help!) To update, just drop the current `pokemon_info` using this command, or right clicking and Delete/Droping it in pgAdmin:
+I've updated the `pokemon_info` table so that you can now use the `rarity` property in your visualizations based on [this visualization](http://i.imgur.com/Qmx2vF2.jpg). (Thanks Niklas and [ferazambuja](https://github.com/ferazambuja) for the help!) To update, just drop the current `pokemon_info` using this command, or right clicking and Delete/Droping it in pgAdmin:
 
 ```sql
 DROP TABLE public.pokemon_info;
