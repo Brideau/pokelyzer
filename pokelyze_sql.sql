@@ -1,8 +1,7 @@
-﻿-- Create the main tables
+﻿----------- The main fact table, spotted pokemon-------------
 
 CREATE TABLE public.spotted_pokemon(
 	id bigserial NOT NULL,
-	name varchar(40) NOT NULL,
 	encounter_id varchar(40),
 	last_modified_time bigint,
 	time_until_hidden_ms bigint,
@@ -14,8 +13,8 @@ CREATE TABLE public.spotted_pokemon(
 	pokemon_id smallint,
 	time_key smallint,
 	date_key integer,
-	longitude_jittered float,
-	latitude_jittered float,
+	longitude_jittered double precision,
+	latitude_jittered double precision,
 	geo_point geometry,
 	geo_point_jittered geometry,
 	pokemon_go_era integer,
@@ -25,15 +24,8 @@ CREATE TABLE public.spotted_pokemon(
 	CONSTRAINT id_primary_key PRIMARY KEY (id)
 
 );
-
-CREATE TABLE public.pokemon_info(
-	pokemon_id smallint NOT NULL,
-	name varchar(40),
-	type varchar(40),
-	rarity varchar(30),
-	CONSTRAINT pokemon_id_primary PRIMARY KEY (pokemon_id)
-
-);
+ALTER TABLE public.spotted_pokemon
+  OWNER TO pokemon_go_role;
 
 CREATE INDEX jitter_index
   ON public.spotted_pokemon
@@ -73,6 +65,41 @@ CREATE INDEX pokemon_id_index
   ON public.spotted_pokemon
   USING btree
   (pokemon_id);
+
+-------- The pokemon info dimension table ------------
+
+CREATE TABLE public.pokemon_info
+(
+  pokemon_id bigint NOT NULL,
+  name text,
+  classification text,
+  type_1 text,
+  type_2 text,
+  weight double precision,
+  height double precision,
+  CONSTRAINT pokemon_info_pkey PRIMARY KEY (pokemon_id)
+)
+ALTER TABLE public.pokemon_info
+	OWNER TO pokemon_go_role;
+CREATE INDEX pokemon_info_pokemon_id_idx
+  ON public.pokemon_info
+  USING btree
+  (pokemon_id);
+
+-------- The meta table for recording schema versions
+
+CREATE TABLE public._meta (
+  id serial,
+  db_version text,
+  last_update date
+);
+ALTER TABLE public.public
+	OWNER TO pokemon_go_role;
+INSERT INTO _meta (db_version, last_update) VALUES ('v1.0.1-alpha', '2016-08-01');
+
+
+--- The time and date dimensions are created with a python script
+
 
 -- Create a point from the latitude and longitude of pokemon
 
@@ -159,3 +186,45 @@ BEFORE INSERT OR UPDATE
 ON spotted_pokemon
 FOR EACH ROW
 EXECUTE PROCEDURE create_timekey_fn();
+
+CREATE OR REPLACE FUNCTION get_db_version()
+RETURNS trigger
+LANGUAGE plpgsql
+SECURITY DEFINER
+AS $BODY$
+DECLARE
+  payload text;
+BEGIN
+    NEW.meta_db_version = (SELECT db_version FROM _meta ORDER BY id DESC LIMIT 1);
+    RETURN NEW;
+END
+$BODY$;
+
+CREATE TRIGGER get_db_version_trigger
+BEFORE INSERT OR UPDATE
+ON spotted_pokemon
+FOR EACH ROW
+EXECUTE PROCEDURE get_db_version();
+
+-- Log the time each record was recorded
+
+ALTER TABLE spotted_pokemon ADD COLUMN meta_row_insertion_time timestamp;
+
+CREATE OR REPLACE FUNCTION get_row_insertion_time()
+RETURNS trigger
+LANGUAGE plpgsql
+SECURITY DEFINER
+AS $BODY$
+DECLARE
+  payload text;
+BEGIN
+    NEW.meta_row_insertion_time = timezone('UTC', CURRENT_TIMESTAMP);
+    RETURN NEW;
+END
+$BODY$;
+
+CREATE TRIGGER row_insertion_time_trigger
+BEFORE INSERT OR UPDATE
+ON spotted_pokemon
+FOR EACH ROW
+EXECUTE PROCEDURE get_row_insertion_time();
