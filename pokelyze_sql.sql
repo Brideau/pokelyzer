@@ -20,7 +20,7 @@ CREATE TABLE public.spotted_pokemon(
 	pokemon_go_era integer,
 	meta_db_version text DEFAULT 'not versioned'::text,
 	meta_row_insertion_time timestamp without time zone,
-	CONSTRAINT encounter_id_unique UNIQUE (encounter_id)
+	CONSTRAINT encounter_id_unique UNIQUE (encounter_id),
 	CONSTRAINT id_primary_key PRIMARY KEY (id)
 
 );
@@ -52,10 +52,6 @@ CREATE INDEX longitude_jit_index
   USING btree
   (longitude_jittered);
 
-CREATE INDEX name_index
-  ON public.spotted_pokemon
-  USING btree (name);
-
 CREATE INDEX point_index
   ON public.spotted_pokemon
   USING gist
@@ -78,13 +74,19 @@ CREATE TABLE public.pokemon_info
   weight double precision,
   height double precision,
   CONSTRAINT pokemon_info_pkey PRIMARY KEY (pokemon_id)
-)
+);
+
 ALTER TABLE public.pokemon_info
 	OWNER TO pokemon_go_role;
 CREATE INDEX pokemon_info_pokemon_id_idx
   ON public.pokemon_info
   USING btree
   (pokemon_id);
+
+CREATE INDEX pokemon_info_pokemon_name_index
+  ON public.pokemon_info
+  USING btree
+  (name);
 
 -------- The meta table for recording schema versions
 
@@ -207,8 +209,6 @@ FOR EACH ROW
 EXECUTE PROCEDURE get_db_version();
 
 -- Log the time each record was recorded
-
-ALTER TABLE spotted_pokemon ADD COLUMN meta_row_insertion_time timestamp;
 
 CREATE OR REPLACE FUNCTION get_row_insertion_time()
 RETURNS trigger
