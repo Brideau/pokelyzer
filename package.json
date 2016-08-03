@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "body-parser": "^1.15.2",
-    "bunyan": "^1.8.1",
     "express": "^4.14.0",
     "gaussian": "^1.1.0",
     "moment": "^2.14.1",
