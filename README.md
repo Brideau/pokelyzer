@@ -124,3 +124,7 @@ If you loaded the database backup file before this time ([commit bd81308](https:
 ```sql
 ALTER TABLE date_dimension ALTER COLUMN date_key TYPE integer USING (date_key::integer);
 ```
+
+### Language Extensions
+
+Pokelyzer includes language patches for translating Pokemon names into various languages. Following setup, execute the SQL patch of your choice from the language_patches folder.
