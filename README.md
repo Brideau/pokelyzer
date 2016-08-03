@@ -61,6 +61,7 @@ Before you try to do recent tutorials or install new versions of the webhook lis
 This patch fixes a bug where two spawns at two different locations may have the same encounter_id, but are not part of the same counter. To fix this, we use a combination of encounter_id and spawn_id to check for uniqueness. After applying the following SQL, do a git pull to get the latest webhook listener:
 
 ```sql
+INSERT INTO _meta (db_version, last_update) VALUES ('v1.2-alpha', '2016-08-03');
 ALTER TABLE public.spotted_pokemon DROP CONSTRAINT encounter_id_unique;
 ALTER TABLE public.spotted_pokemon
   ADD CONSTRAINT encounter_spawnpoint_id_unique UNIQUE(encounter_id, spawnpoint_id);
