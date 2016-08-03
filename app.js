@@ -1,4 +1,3 @@
-var bunyan = require('bunyan');
 var express = require('express');
 var bodyParser = require('body-parser');
 var moment = require('moment')
@@ -20,16 +19,6 @@ var pool = new pg.Pool(config);
 
 var encounter_encoded = String(process.env.ENC_ENC) || "t";
 
-var log = bunyan.createLogger({
-  name: 'MainApp',
-  streams: [
-    {
-      level: 'info',
-      stream: process.stdout
-    }
-  ]
-});
-
 var app = express();
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
@@ -40,7 +29,7 @@ var port = process.env.WS_PORT || 9876;
 var era = process.env.ERA || 2;
 
 server.listen(port, function (err) {
-  log.info('Running server on port ' + port);
+  console.info('Running server on port ' + port);
 });
 
 app.post('/', function(req, res) {
@@ -61,11 +50,9 @@ app.post('/', function(req, res) {
         m.encounter_id = buff.toString();
       }
 
-      log.debug(m);
-
       pool.connect(function(err, client, done) {
         if(err) {
-          return log.error('Error fetching client from pool', err);
+          return console.log('Error fetching client from pool', err);
         }
 
         query_string = "INSERT INTO spotted_pokemon ( \
@@ -102,15 +89,14 @@ app.post('/', function(req, res) {
           hidden_time_unix_s = EXCLUDED.hidden_time_unix_s, \
           hidden_time_utc = EXCLUDED.hidden_time_utc;";
 
-        log.info("Pokemon with ID " + m.pokemon_id + " found.")
-        log.trace(query_string);
+        console.log("Pokemon with ID " + m.pokemon_id + " found.")
 
         client.query(query_string,
         function(err, result) {
           done();
 
           if(err) {
-            return log.error("Error running query", err);
+            return console.log("Error running query", err);
           }
         });
       });
@@ -119,5 +105,5 @@ app.post('/', function(req, res) {
 });
 
 pool.on('error', function(err, client) {
-  log.error('Idle client error', err.message, err.stack);
+  console.log('Idle client error', err.message, err.stack);
 });
