@@ -18,7 +18,7 @@ var config = {
 }
 var pool = new pg.Pool(config);
 
-var encounter_encoded = process.env.ENC_ENC || "t";
+var encounter_encoded = String(process.env.ENC_ENC) || "t";
 
 var log = bunyan.createLogger({
   name: 'MainApp',
