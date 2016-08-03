@@ -82,7 +82,7 @@ app.post('/', function(req, res) {
           " + m.latitude_jittered + "::double precision, \
           " + m.pokemon_go_era + "::integer \
         ) \
-        ON CONFLICT (encounter_id) \
+        ON CONFLICT (encounter_id, spawnpoint_id) \
         DO UPDATE \
           SET last_modified_time = EXCLUDED.last_modified_time, \
           time_until_hidden_ms = EXCLUDED.time_until_hidden_ms, \
@@ -93,8 +93,8 @@ app.post('/', function(req, res) {
 
         client.query(query_string,
         function(err, result) {
+          // console.log(result);
           done();
-
           if(err) {
             return console.log("Error running query", err);
           }
