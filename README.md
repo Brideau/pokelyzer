@@ -40,7 +40,7 @@ The webhook listener is a node application that listens for POSTS to port 9876 b
 }
 ```
 
-Where timestamps are in UNIX time.
+Where timestamps are in UNIX time. If you are manually submitting data to this endpoint, pass in an additional parameter `ENC_ENC=f` (`set ENC_ENC=f` on Windows) to ensure that it does not try to decode the `encounter_id`, which it has to for the PokemonGo-Map data source. 
 
 ## Installation
 
