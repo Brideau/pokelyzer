@@ -53,15 +53,15 @@ app.post('/', function(req, res) {
       m.hidden_time_utc = moment
         .unix(m.hidden_time_unix_s)
         .format("YYYY-MM-DD HH:mm:ss");
-      m.latitude_jittered = m.latitude + dist.ppf(Math.random()) * 0.0005;
-      m.longitude_jittered = m.longitude + dist.ppf(Math.random()) * 0.0005;
+      m.latitude_jittered = parseFloat(m.latitude) + dist.ppf(Math.random()) * 0.0005;
+      m.longitude_jittered = parseFloat(m.longitude) + dist.ppf(Math.random()) * 0.0005;
 
       if (encounter_encoded == "t") {
         buff = new Buffer(m.encounter_id, 'base64');
         m.encounter_id = buff.toString();
       }
 
-      log.debug(m.encounter_id);
+      log.debug(m);
 
       pool.connect(function(err, client, done) {
         if(err) {
