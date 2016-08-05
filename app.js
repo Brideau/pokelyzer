@@ -40,7 +40,7 @@ app.post('/', function(req, res) {
       m.pokemon_go_era = era;
       m.hidden_time_unix_s = m.disappear_time;
       m.hidden_time_utc = moment
-        .unix(m.hidden_time_unix_s)
+        .unix(m.hidden_time_unix_s).utc()
         .format("YYYY-MM-DD HH:mm:ss");
       m.latitude_jittered = parseFloat(m.latitude) + dist.ppf(Math.random()) * 0.0005;
       m.longitude_jittered = parseFloat(m.longitude) + dist.ppf(Math.random()) * 0.0005;

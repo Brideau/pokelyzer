@@ -27,6 +27,11 @@ CREATE TABLE public.spotted_pokemon(
 ALTER TABLE public.spotted_pokemon
   OWNER TO pokemon_go_role;
 
+CREATE INDEX point_index
+  ON public.spotted_pokemon
+  USING gist
+  (geo_point);
+
 CREATE INDEX jitter_index
   ON public.spotted_pokemon
   USING gist
@@ -52,15 +57,20 @@ CREATE INDEX longitude_jit_index
   USING btree
   (longitude_jittered);
 
-CREATE INDEX point_index
-  ON public.spotted_pokemon
-  USING gist
-  (geo_point);
-
 CREATE INDEX pokemon_id_index
   ON public.spotted_pokemon
   USING btree
   (pokemon_id);
+
+CREATE INDEX spotted_pokemon_date_key
+  ON public.spotted_pokemon
+  USING btree
+  (date_key);
+
+CREATE INDEX spotted_pokemon_time_key
+  ON public.spotted_pokemon
+  USING btree
+  (time_key);
 
 -------- The pokemon info dimension table ------------
 
