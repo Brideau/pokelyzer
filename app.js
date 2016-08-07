@@ -34,8 +34,7 @@ server.listen(port, function (err) {
 
 app.post('/', function(req, res) {
     var body = req.body;
-    if (body.type == "pokemon") {
-
+    if (body.type == "pokemon" && body.message.is_lured == false) {
       var m = body.message;
       m.pokemon_go_era = era;
       m.hidden_time_unix_s = m.disappear_time;
@@ -49,7 +48,7 @@ app.post('/', function(req, res) {
         buff = new Buffer(m.encounter_id, 'base64');
         m.encounter_id = buff.toString();
       }
-
+      // console.log(m);
       pool.connect(function(err, client, done) {
         if(err) {
           return console.log('Error fetching client from pool', err);
@@ -89,6 +88,7 @@ app.post('/', function(req, res) {
           hidden_time_unix_s = EXCLUDED.hidden_time_unix_s, \
           hidden_time_utc = EXCLUDED.hidden_time_utc;";
 
+        // console.log(query_string);
         console.log("Pokemon with ID " + m.pokemon_id + " found.")
 
         client.query(query_string,
