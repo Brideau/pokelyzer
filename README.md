@@ -56,4 +56,4 @@ To use the webhook listener, I recommend doing a fresh installation of PokemonGo
 
 Before you try to do recent tutorials or install new versions of the webhook listener, please install all patches **since your installation date**.
 
-All patches can be found in the [Patches wiki page](https://github.com/Brideau/pokelyzer/wiki/).
+All patches can be found in the [Patches wiki page](https://github.com/Brideau/pokelyzer/wiki/Patches).
