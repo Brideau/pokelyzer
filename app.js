@@ -17,7 +17,7 @@ var config = {
 }
 var pool = new pg.Pool(config);
 
-var encounter_encoded = String(process.env.ENC_ENC) || "t";
+var encounter_encoded = process.env.ENC_ENC || "t";
 
 var app = express();
 app.use(bodyParser.urlencoded({extended : true}));
@@ -34,7 +34,7 @@ server.listen(port, function (err) {
 
 app.post('/', function(req, res) {
     var body = req.body;
-    if (body.type == "pokemon" && body.message.is_lured == false) {
+    if (body.type == "pokemon") {
       var m = body.message;
       m.pokemon_go_era = era;
       m.hidden_time_unix_s = m.disappear_time;
@@ -43,6 +43,9 @@ app.post('/', function(req, res) {
         .format("YYYY-MM-DD HH:mm:ss");
       m.latitude_jittered = parseFloat(m.latitude) + dist.ppf(Math.random()) * 0.0005;
       m.longitude_jittered = parseFloat(m.longitude) + dist.ppf(Math.random()) * 0.0005;
+      if (body.message.is_lured == true) {
+        m.time_until_hidden_ms = null;
+      }
 
       if (encounter_encoded == "t") {
         buff = new Buffer(m.encounter_id, 'base64');
