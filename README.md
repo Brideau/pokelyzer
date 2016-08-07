@@ -16,7 +16,7 @@ These blog posts help to explain what Pokelyzer is, and what it can be used for.
 
 The schema itself follows the approach of dimensional modelling to keep it fast and flexible. The entire schema currently looks like this:
 
-![Schema image](http://imgur.com/4BueNOT.png)
+![Schema image](http://i.imgur.com/y8580i4.png)
 
 It looks like a lot, but it isn't. `spotted_pokemon` is where all your data goes. The `date_dimension` and `time_dimension` tables let you slice and filter by dates and times, and the `pokemon_info` table lets you do the same with Pokemon information. `_meta` keeps track of changes to the schema itself. `date_dimension`, `time_dimension`, `pokemon_info` and `_meta` all connect to the `spotted_pokemon` table.
 
