@@ -43,8 +43,11 @@ app.post('/', function(req, res) {
         .format("YYYY-MM-DD HH:mm:ss");
       m.latitude_jittered = parseFloat(m.latitude) + dist.ppf(Math.random()) * 0.0005;
       m.longitude_jittered = parseFloat(m.longitude) + dist.ppf(Math.random()) * 0.0005;
-      if (body.message.is_lured == true) {
+      if (m.is_lured == true) {
         m.time_until_hidden_ms = null;
+        m.is_lured = "Lured";
+      } else {
+        m.is_lured = "Not Lured";
       }
 
       if (encounter_encoded == "t") {
@@ -69,20 +72,22 @@ app.post('/', function(req, res) {
           pokemon_id, \
           longitude_jittered, \
           latitude_jittered, \
-          pokemon_go_era) \
+          pokemon_go_era, \
+          lured) \
         VALUES ( \
-          '" + m.encounter_id + "'::varchar, \
+          '" + m.encounter_id + "'::text, \
           " + m.last_modified_time + "::bigint, \
           " + m.time_until_hidden_ms + "::bigint, \
           " + m.hidden_time_unix_s + "::bigint, \
           '" + m.hidden_time_utc + "'::timestamp, \
-          '" + m.spawnpoint_id + "'::varchar, \
+          '" + m.spawnpoint_id + "'::text, \
           " + m.longitude + "::double precision, \
           " + m.latitude + "::double precision, \
           " + m.pokemon_id + "::smallint, \
           " + m.longitude_jittered + "::double precision, \
           " + m.latitude_jittered + "::double precision, \
-          " + m.pokemon_go_era + "::integer \
+          " + m.pokemon_go_era + "::integer, \
+          '" + m.is_lured + "'::text \
         ) \
         ON CONFLICT (encounter_id, spawnpoint_id) \
         DO UPDATE \
