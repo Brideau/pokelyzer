@@ -5,28 +5,27 @@ var moment = require('moment')
 var gaussian = require('gaussian');
 var dist = gaussian(0, 0.3);
 
+var configFile = require('./config');
 // Set up Postgres connection
 var pg = require('pg');
 var config = {
-  user: process.env.DB_USER || 'pokemon_go_role',
-  database: process.env.DB_NAME || 'pokemon_go',
-  password: process.env.DB_PASS,
-  port: process.env.DB_PORT || 5432,
+  user: process.env.DB_USER || configFile.DB_USER,
+  database: process.env.DB_NAME || configFile.DB_NAME,
+  password: process.env.DB_PASS || configFile.DB_PASS,
+  port: process.env.DB_PORT || configFile.DB_PORT,
   max: 20,
   idleTimeoutMillis: 30000
 }
 var pool = new pg.Pool(config);
-
-var encounter_encoded = process.env.ENC_ENC || "t";
+var encounter_encoded = process.env.ENC_ENC || configFile.ENC_ENC;
 
 var app = express();
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 
 var server = require('http').Server(app);
-var port = process.env.WS_PORT || 9876;
-
-var era = process.env.ERA || 2;
+var port = process.env.WS_PORT || configFile.WS_PORT;
+var era = process.env.ERA || configFile.ERA;
 
 server.listen(port, function (err) {
   console.info('Running server on port ' + port);
