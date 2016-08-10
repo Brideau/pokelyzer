@@ -96,7 +96,7 @@ app.post('/', function(req, res) {
           hidden_time_utc = EXCLUDED.hidden_time_utc;";
 
         // console.log(query_string);
-        console.log("Pokemon with ID " + m.pokemon_id + " found.")
+        console.log("[" + moment().format() + "] Pokemon with ID " + m.pokemon_id + " found.")
 
         client.query(query_string,
         function(err, result) {
